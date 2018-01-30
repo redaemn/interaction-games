@@ -1,0 +1,22 @@
+{
+  "name": "animation-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "del-cli": "^1.1.0",
+    "path": "^0.12.7",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "clean": "del-cli dist tmp types",
+    "build": "npm run clean && webpack",
+    "watch": "webpack --watch"
+  },
+  "author": "Gabriele Rabbiosi",
+  "license": "ISC"
+}
