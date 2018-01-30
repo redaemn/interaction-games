@@ -1,7 +1,8 @@
 import { Canvas } from './Canvas';
+import { MouseModel } from './MouseModel';
 
 export class KeyboardInteractions {
-    constructor(private canvas: Canvas) {
+    constructor(private canvas: Canvas, private mouseModel: MouseModel) {
     }
 
     /**
@@ -16,7 +17,20 @@ export class KeyboardInteractions {
      * handleKeydown
      */
     public handleKeydown(event: KeyboardEvent): void {
-        // empty
+        switch (event.code) {
+            case 'KeyQ':
+                this.mouseModel.increaseTailLength();
+                break;
+            case 'KeyA':
+                this.mouseModel.decreaseTailLength();
+                break;
+            case 'KeyW':
+                this.mouseModel.increaseTailTransparency();
+                break;
+            case 'KeyS':
+                this.mouseModel.decreaseTailTransparency();
+                break;
+        }
     }
 
     /**

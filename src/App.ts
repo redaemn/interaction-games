@@ -15,7 +15,7 @@ export class App {
         this.canvas = new Canvas();
         this.renderer = new Renderer();
         this.mouseModel = new MouseModel(this.canvas);
-        this.keyboardInteractions = new KeyboardInteractions(this.canvas);
+        this.keyboardInteractions = new KeyboardInteractions(this.canvas, this.mouseModel);
         this.mouseInteractions = new MouseInteractions(this.canvas, this.mouseModel);
     }
 
