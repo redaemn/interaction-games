@@ -25,10 +25,16 @@ export class KeyboardInteractions {
                 this.mouseModel.decreaseTailLength();
                 break;
             case 'KeyW':
-                this.mouseModel.increaseTailTransparency();
+                this.mouseModel.increaseTailLightness();
                 break;
             case 'KeyS':
-                this.mouseModel.decreaseTailTransparency();
+                this.mouseModel.decreaseTailLightness();
+                break;
+            case 'KeyE':
+                this.mouseModel.increaseColor();
+                break;
+            case 'KeyD':
+                this.mouseModel.decreaseColor();
                 break;
         }
     }
